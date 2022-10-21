@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
 import styled from '@emotion/styled';
-import styles from '../styles/Home.module.css';
+import styles from '../../styles/Home.module.css'
 
 
 
@@ -14,9 +14,13 @@ min-height: 100vh;
 export default function Header() {
   return (
 
-      <Header>
+      <HeaderContainer>
       <h1 className={styles.title}> Bem vindo ao projeto em grupo! </h1>
-      </Header>
-   
+      <p className={styles.description}>
+          Agora analisem o arquivo index.tsx na pasta pages
+        </p>
+      </HeaderContainer>
+
+    
   )
 }
