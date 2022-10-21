@@ -1,18 +1,11 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import React from 'react'
+import styled from '@emotion/styled' 
 import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
+export default function Content() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Projeto React - Trabalho em Grupo</title>
-        <meta name="description" content="Objetivo é desmembrar este arquivo em vários componentes" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
+	<div>
+    <main className={styles.main}>
         <h1 className={styles.title}>
           Bem vindo ao projeto em grupo!
         </h1>
@@ -24,12 +17,14 @@ const Home: NextPage = () => {
         <div className={styles.grid}>
           <p className={styles.card}>
             <h2>Encontramos o erro  &rarr;</h2>
-          <p>Não existe mais um erro neste arquivo. Veja na tela.</p>
+          <p>Não existe mais erro. Veja que foi corrigido com sucesso.</p>
           </p>
 
 
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
+          <a href="https://nextjs.org/learn" 
+            className={styles.card}
+            >
             <h2>Crie um repositório &rarr;</h2>
             <p>Após concluir o trabalho suba o código no github do grupo</p>
           </a>
@@ -53,21 +48,6 @@ const Home: NextPage = () => {
           </a>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
+  </div>
   )
 }
-
-export default Home
